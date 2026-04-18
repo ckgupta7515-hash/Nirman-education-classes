@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Chapters</title>
+
+<style>
+
+body {
+font-family: 'Segoe UI', sans-serif;
+margin: 0;
+background: linear-gradient(135deg,#004aad,#00c6ff);
+}
+
+.header {
+color: white;
+text-align: center;
+padding: 20px;
+font-size: 22px;
+font-weight: bold;
+}
+
+.main-box {
+background: white;
+border-radius: 25px 25px 0 0;
+padding: 18px;
+min-height: 90vh;
+}
+
+.chapter-card {
+
+background: linear-gradient(135deg,#f9fbff,#eef3ff);
+
+padding: 16px;
+
+border-radius: 14px;
+
+margin-bottom: 14px;
+
+box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+
+}
+
+.chapter-name {
+
+font-size: 17px;
+
+font-weight: bold;
+
+color: #004aad;
+
+margin-bottom: 5px;
+
+}
+
+.details {
+
+font-size: 13px;
+
+color: #555;
+
+display: flex;
+
+justify-content: space-between;
+
+margin-bottom: 8px;
+
+}
+
+.start-btn {
+
+background: linear-gradient(135deg,#4caf50,#2e7d32);
+
+color: white;
+
+border: none;
+
+padding: 10px;
+
+border-radius: 10px;
+
+font-size: 14px;
+
+cursor: pointer;
+
+width: 100%;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="header">
+Maths Chapters
+</div>
+
+<div class="main-box" id="chapterList">
+</div>
+
+<script>
+
+/* Maths Chapters */
+
+const mathsChapters = [
+
+"Percentage",
+"Profit Loss",
+"Ratio and Proportion",
+"LCM & HCF",
+"Average",
+"Time and Work",
+"Pipes and Cisterns",
+"Time and Distance",
+"Boat and Streams",
+"Algebra",
+"Trigonometry",
+"Mensuration",
+"Geometry",
+"Number System",
+"Statistics and DI",
+"Probability",
+"Sequence and Series",
+"Allegation or Mixture",
+"SI & CI",
+"Power and Indices",
+"Simplification"
+
+];
+
+/* Load Chapters Direct */
+
+mathsChapters.forEach(function(chapter){
+
+let div =
+document.createElement("div");
+
+div.className =
+"chapter-card";
+
+div.innerHTML = `
+
+<div class="chapter-name">
+📘 ${chapter}
+</div>
+
+<div class="details">
+
+<span>📝 50 Questions</span>
+
+<span>⏱ 50 Minutes</span>
+
+</div>
+
+<button class="start-btn"
+
+onclick="startTest('${chapter}')">
+
+▶ Start Test
+
+</button>
+
+`;
+
+document.getElementById("chapterList")
+.appendChild(div);
+
+});
+
+/* Start Test */
+
+function startTest(chapter){
+
+window.location.href =
+"instructions.html?chapter="
++ chapter;
+
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Select Subject</title>
+
+<style>
+
+body {
+font-family: 'Segoe UI', sans-serif;
+margin: 0;
+background: linear-gradient(135deg,#004aad,#00c6ff);
+min-height: 100vh;
+}
+
+/* Header Banner */
+
+.header {
+text-align: center;
+padding: 25px 10px;
+color: white;
+}
+
+.logo {
+font-size: 26px;
+font-weight: bold;
+}
+
+.tagline {
+font-size: 14px;
+opacity: 0.9;
+}
+
+/* White Main Box */
+
+.main-box {
+background: white;
+border-radius: 25px 25px 0 0;
+padding: 20px;
+margin-top: 15px;
+min-height: 80vh;
+}
+
+/* Subject Cards */
+
+.subject-card {
+
+background: linear-gradient(135deg,#f9fbff,#eef3ff);
+padding: 18px;
+margin-bottom: 15px;
+border-radius: 15px;
+
+display: flex;
+align-items: center;
+justify-content: space-between;
+
+box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+
+cursor: pointer;
+
+transition: 0.3s;
+}
+
+.subject-card:hover {
+transform: scale(1.03);
+}
+
+/* Icon Circle */
+
+.icon-circle {
+
+width: 50px;
+height: 50px;
+
+border-radius: 50%;
+
+display: flex;
+align-items: center;
+justify-content: center;
+
+font-size: 22px;
+
+color: white;
+
+}
+
+/* Subject Row */
+
+.subject-left {
+
+display: flex;
+align-items: center;
+gap: 15px;
+
+}
+
+.subject-name {
+
+font-size: 18px;
+font-weight: bold;
+color: #004aad;
+
+}
+
+.arrow {
+
+font-size: 18px;
+color: gray;
+
+}
+
+/* Different Colors */
+
+.math { background: linear-gradient(135deg,#ff9800,#ff5722); }
+
+.reasoning { background: linear-gradient(135deg,#4caf50,#2e7d32); }
+
+.english { background: linear-gradient(135deg,#9c27b0,#673ab7); }
+
+.gk { background: linear-gradient(135deg,#2196f3,#0d47a1); }
+
+/* Footer */
+
+.footer {
+
+text-align: center;
+font-size: 12px;
+color: gray;
+margin-top: 10px;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="header">
+
+<div class="logo">
+📚 Nirman Education
+</div>
+
+<div class="tagline">
+Select Subject to Start Test
+</div>
+
+</div>
+
+<div class="main-box">
+
+<!-- Maths -->
+
+<div class="subject-card"
+onclick="openSubject('maths')">
+
+<div class="subject-left">
+
+<div class="icon-circle math">
+📘
+</div>
+
+<div class="subject-name">
+Maths
+</div>
+
+</div>
+
+<div class="arrow">
+➡️
+</div>
+
+</div>
+
+<!-- Reasoning -->
+
+<div class="subject-card"
+onclick="openSubject('reasoning')">
+
+<div class="subject-left">
+
+<div class="icon-circle reasoning">
+🧠
+</div>
+
+<div class="subject-name">
+Reasoning
+</div>
+
+</div>
+
+<div class="arrow">
+➡️
+</div>
+
+</div>
+
+<!-- English -->
+
+<div class="subject-card"
+onclick="openSubject('english')">
+
+<div class="subject-left">
+
+<div class="icon-circle english">
+📖
+</div>
+
+<div class="subject-name">
+English
+</div>
+
+</div>
+
+<div class="arrow">
+➡️
+</div>
+
+</div>
+
+<!-- GK -->
+
+<div class="subject-card"
+onclick="openSubject('gkgs')">
+
+<div class="subject-left">
+
+<div class="icon-circle gk">
+🌍
+</div>
+
+<div class="subject-name">
+GK / GS
+</div>
+
+</div>
+
+<div class="arrow">
+➡️
+</div>
+
+</div>
+
+<div class="footer">
+| Nirman Education | <br>
+
+Web Created by 
+<a href="https://instagram.com/ck__arts" 
+target="_blank"
+style="color:#004aad;
+font-weight:bold;
+text-decoration:none;">
+
+@ck__arts
+
+</a>
+
+</div>
+
+</div>
+
+<script>
+
+function openSubject(subject) {
+
+window.location.href =
+"chapters.html?subject=" + subject;
+
+}
+
+</script>
+
+</body>
+</html>
