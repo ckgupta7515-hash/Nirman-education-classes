@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Percentage Sets</title>
+
+<style>
+
+/* Page Layout */
+
+body{
+margin:0;
+font-family:'Segoe UI';
+background:linear-gradient(135deg,#004aad,#00c6ff);
+
+display:flex;
+flex-direction:column;
+min-height:100vh;
+}
+
+/* Header */
+
+.header{
+color:white;
+text-align:center;
+padding:18px;
+font-size:22px;
+font-weight:bold;
+}
+
+/* Main Content */
+
+.main-box{
+background:white;
+border-radius:25px 25px 0 0;
+padding:18px;
+flex:1;
+}
+
+/* Set Cards */
+
+.set-card{
+
+background:linear-gradient(135deg,#f9fbff,#eef3ff);
+
+padding:16px;
+
+border-radius:14px;
+
+margin-bottom:14px;
+
+box-shadow:0 6px 14px rgba(0,0,0,0.15);
+
+}
+
+/* Buttons */
+
+.start-btn{
+
+background:linear-gradient(135deg,#4caf50,#2e7d32);
+
+color:white;
+
+border:none;
+
+padding:12px;
+
+border-radius:10px;
+
+width:100%;
+
+font-weight:bold;
+
+cursor:pointer;
+
+font-size:15px;
+
+}
+
+.back-btn{
+
+background:#004aad;
+
+color:white;
+
+border:none;
+
+padding:10px;
+
+border-radius:10px;
+
+width:100%;
+
+font-weight:bold;
+
+cursor:pointer;
+
+margin-bottom:12px;
+
+}
+
+/* Compact Footer */
+
+.footer{
+
+margin:8px 10px;
+
+padding:12px;
+
+background:linear-gradient(135deg,#004aad,#00c6ff);
+
+border-radius:14px;
+
+text-align:center;
+
+color:white;
+
+font-size:13px;
+
+box-shadow:0 6px 14px rgba(0,0,0,0.25);
+
+}
+
+.footer-title{
+
+font-size:14px;
+
+font-weight:600;
+
+margin-bottom:6px;
+
+}
+
+.insta-btn{
+
+display:inline-block;
+
+padding:6px 14px;
+
+background:white;
+
+color:#e1306c;
+
+font-weight:bold;
+
+font-size:14px;
+
+border-radius:20px;
+
+text-decoration:none;
+
+box-shadow:0 4px 10px rgba(0,0,0,0.25);
+
+}
+
+.footer-text{
+
+margin-top:6px;
+
+font-size:11px;
+
+opacity:0.9;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="header">
+
+📘 Percentage Test Sets
+
+</div>
+
+<div class="main-box">
+
+<!-- Back Button -->
+
+<button class="back-btn"
+onclick="goBack()">
+
+⬅ Back to Chapters
+
+</button>
+
+<!-- Set 1 -->
+
+<div class="set-card">
+
+📄 <b>Set-1</b> (50 Questions)
+
+<br><br>
+
+<button class="start-btn"
+
+onclick="startTest('percentage-set1.html')">
+
+Start Test
+
+</button>
+
+</div>
+
+<!-- Set 2 -->
+
+<div class="set-card">
+
+📄 <b>Set-2</b> (50 Questions)
+
+<br><br>
+
+<button class="start-btn"
+
+onclick="startTest('percentage-set2.html')">
+
+Start Test
+
+</button>
+
+</div>
+
+</div>
+
+<!-- Compact Footer Bottom -->
+
+<div class="footer">
+
+<div class="footer-title">
+
+🎨 Developed by
+
+</div>
+
+<a href="https://instagram.com/ck__arts"
+
+target="_blank"
+
+class="insta-btn">
+
+📸 @ck__arts
+
+</a>
+
+<div class="footer-text">
+
+Creative Design by CK Gupta
+
+</div>
+
+</div>
+
+<script>
+
+function startTest(file){
+
+window.location.href=file;
+
+}
+
+function goBack(){
+
+window.history.back();
+
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Maths Chapters</title>
+
+<style>
+
+/* Page Layout */
+
+body {
+font-family: 'Segoe UI', sans-serif;
+margin: 0;
+background: linear-gradient(135deg,#004aad,#00c6ff);
+
+display:flex;
+flex-direction:column;
+min-height:100vh;
+}
+
+/* Header */
+
+.header {
+color: white;
+text-align: center;
+padding: 20px;
+font-size: 22px;
+font-weight: bold;
+}
+
+/* Main Box */
+
+.main-box {
+background: white;
+border-radius: 25px 25px 0 0;
+padding: 18px;
+flex:1;
+}
+
+/* Chapter Card */
+
+.chapter-card {
+
+background: linear-gradient(135deg,#f9fbff,#eef3ff);
+
+padding: 16px;
+
+border-radius: 14px;
+
+margin-bottom: 14px;
+
+box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+
+cursor:pointer;
+
+transition:.2s;
+
+}
+
+.chapter-card:hover{
+
+transform:scale(1.02);
+
+}
+
+.chapter-name {
+
+font-size: 17px;
+
+font-weight: bold;
+
+color: #004aad;
+
+}
+
+/* Compact Footer */
+
+.footer{
+
+margin:8px 10px;
+
+padding:12px;
+
+background:linear-gradient(135deg,#004aad,#00c6ff);
+
+border-radius:14px;
+
+text-align:center;
+
+color:white;
+
+font-size:13px;
+
+box-shadow:0 6px 14px rgba(0,0,0,0.25);
+
+}
+
+.footer-title{
+
+font-size:14px;
+
+font-weight:600;
+
+margin-bottom:6px;
+
+}
+
+.insta-btn{
+
+display:inline-block;
+
+padding:6px 14px;
+
+background:white;
+
+color:#e1306c;
+
+font-weight:bold;
+
+font-size:14px;
+
+border-radius:20px;
+
+text-decoration:none;
+
+box-shadow:0 4px 10px rgba(0,0,0,0.25);
+
+}
+
+.footer-text{
+
+margin-top:6px;
+
+font-size:11px;
+
+opacity:0.9;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="header">
+📘 Maths Chapters
+</div>
+
+<div class="main-box" id="chapterList">
+</div>
+
+<!-- Footer Bottom -->
+
+<div class="footer">
+
+<div class="footer-title">
+
+🎨 Developed by
+
+</div>
+
+<a href="https://instagram.com/ck__arts"
+
+target="_blank"
+
+class="insta-btn">
+
+📸 @ck__arts
+
+</a>
+
+<div class="footer-text">
+
+Creative Design by CK Gupta
+
+</div>
+
+</div>
+
+<script>
+
+/* Chapter Name + Sets Page */
+
+const mathsChapters = [
+
+{ name:"Percentage", file:"percentage-sets.html" },
+
+{ name:"Profit Loss", file:"profitloss-sets.html" },
+
+{ name:"Ratio and Proportion", file:"ratio-sets.html" },
+
+{ name:"LCM & HCF", file:"lcm-sets.html" },
+
+{ name:"Average", file:"average-sets.html" },
+
+{ name:"Time and Work", file:"timework-sets.html" },
+
+{ name:"Pipes and Cisterns", file:"pipes-sets.html" },
+
+{ name:"Time and Distance", file:"timedistance-sets.html" },
+
+{ name:"Boat and Streams", file:"boat-sets.html" },
+
+{ name:"Algebra", file:"algebra-sets.html" },
+
+{ name:"Trigonometry", file:"trigonometry-sets.html" },
+
+{ name:"Mensuration", file:"mensuration-sets.html" },
+
+{ name:"Geometry", file:"geometry-sets.html" },
+
+{ name:"Number System", file:"numbersystem-sets.html" },
+
+{ name:"Statistics and DI", file:"statistics-sets.html" },
+
+{ name:"Probability", file:"probability-sets.html" },
+
+{ name:"Sequence and Series", file:"sequence-sets.html" },
+
+{ name:"Allegation or Mixture", file:"allegation-sets.html" },
+
+{ name:"SI & CI", file:"sici-sets.html" },
+
+{ name:"Power and Indices", file:"power-sets.html" },
+
+{ name:"Simplification", file:"simplification-sets.html" }
+
+];
+
+/* Load Chapters */
+
+mathsChapters.forEach(function(chapter){
+
+let div=document.createElement("div");
+
+div.className="chapter-card";
+
+div.innerHTML=`
+
+<div class="chapter-name">
+
+📘 ${chapter.name}
+
+</div>
+
+`;
+
+div.onclick=function(){
+
+window.location.href=chapter.file;
+
+};
+
+document.getElementById("chapterList")
+
+.appendChild(div);
+
+});
+
+</script>
+
+</body>
+</html>
