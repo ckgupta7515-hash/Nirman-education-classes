@@ -104,35 +104,76 @@ Maths Chapters
 
 <script>
 
-/* Maths Chapters */
+/* Chapter Name + File Link */
 
 const mathsChapters = [
 
-"Percentage",
-"Profit Loss",
-"Ratio and Proportion",
-"LCM & HCF",
-"Average",
-"Time and Work",
-"Pipes and Cisterns",
-"Time and Distance",
-"Boat and Streams",
-"Algebra",
-"Trigonometry",
-"Mensuration",
-"Geometry",
-"Number System",
-"Statistics and DI",
-"Probability",
-"Sequence and Series",
-"Allegation or Mixture",
-"SI & CI",
-"Power and Indices",
-"Simplification"
+{ name:"Percentage",
+file:"percentage-test.html" },
+
+{ name:"Profit Loss",
+file:"profit-loss-test.html" },
+
+{ name:"Ratio and Proportion",
+file:"ratio-test.html" },
+
+{ name:"LCM & HCF",
+file:"lcm-hcf-test.html" },
+
+{ name:"Average",
+file:"average-test.html" },
+
+{ name:"Time and Work",
+file:"time-work-test.html" },
+
+{ name:"Pipes and Cisterns",
+file:"pipes-test.html" },
+
+{ name:"Time and Distance",
+file:"time-distance-test.html" },
+
+{ name:"Boat and Streams",
+file:"boat-test.html" },
+
+{ name:"Algebra",
+file:"algebra-test.html" },
+
+{ name:"Trigonometry",
+file:"trigonometry-test.html" },
+
+{ name:"Mensuration",
+file:"mensuration-test.html" },
+
+{ name:"Geometry",
+file:"geometry-test.html" },
+
+{ name:"Number System",
+file:"number-system-test.html" },
+
+{ name:"Statistics and DI",
+file:"statistics-test.html" },
+
+{ name:"Probability",
+file:"probability-test.html" },
+
+{ name:"Sequence and Series",
+file:"sequence-test.html" },
+
+{ name:"Allegation or Mixture",
+file:"allegation-test.html" },
+
+{ name:"SI & CI",
+file:"si-ci-test.html" },
+
+{ name:"Power and Indices",
+file:"power-test.html" },
+
+{ name:"Simplification",
+file:"simplification-test.html" }
 
 ];
 
-/* Load Chapters Direct */
+/* Load Chapters */
 
 mathsChapters.forEach(function(chapter){
 
@@ -145,7 +186,7 @@ div.className =
 div.innerHTML = `
 
 <div class="chapter-name">
-📘 ${chapter}
+📘 ${chapter.name}
 </div>
 
 <div class="details">
@@ -158,26 +199,25 @@ div.innerHTML = `
 
 <button class="start-btn"
 
-onclick="startTest('${chapter}')">
+onclick="openTest('${chapter.file}')">
 
-▶ Start Test
+Start Test
 
 </button>
 
 `;
 
 document.getElementById("chapterList")
+
 .appendChild(div);
 
 });
 
-/* Start Test */
+/* Open Test */
 
-function startTest(chapter){
+function openTest(file){
 
-window.location.href =
-"instructions.html?chapter="
-+ chapter;
+window.location.href = file;
 
 }
 
